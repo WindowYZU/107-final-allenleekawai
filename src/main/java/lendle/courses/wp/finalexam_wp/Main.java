@@ -110,18 +110,8 @@ public class Main extends javax.swing.JFrame {
             //Q1: 開啟 message dialog （10%）
             if(title.equals(title))
             {
-                
+                JOptionPane.showMessageDialog(rootPane, "不可以重複");
             }
-            JInternalFrame internalFrame = new JInternalFrame(title);
-            jDesktopPane1.add(internalFrame);
-            internalFrame.setSize(300, 300);
-            internalFrame.setVisible(true);
-            internalFrame.setMaximizable(true);
-            internalFrame.setIconifiable(true);
-            internalFrame.setResizable(true);
-            internalFrame.setClosable(true);
-            internalFrame.setLocation(jDesktopPane1.getAllFrames().length*10, jDesktopPane1.getAllFrames().length*10);
-            this.add(internalFrame);
             ////////////////////
             return;
         }
