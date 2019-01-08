@@ -113,7 +113,7 @@ public class Main extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, "不可以重複");
             }
             TaskFrame taskFrame = new TaskFrame();
-            jDesktopPane1.add(TaskFrame);
+            //jDesktopPane1.add(TaskFrame);
             ////////////////////
             return;
         }
@@ -122,7 +122,7 @@ public class Main extends javax.swing.JFrame {
         //Q2: 建立 TaskFrame（等同於 JInternalFrame）
         //加到 jDesktopPane1 (20%)
         TaskFrame taskFrame = new TaskFrame();
-        jDesktopPane1.add(taskFrame);
+        this.jDesktopPane1.add(taskFrame);
         taskFrame.setContentPane(jDesktopPane1);
         taskFrame.setSize(300, 300);
         taskFrame.setVisible(true);
@@ -154,7 +154,7 @@ public class Main extends javax.swing.JFrame {
             //設定 noteTitle, noteContent
             //加到 jDesktopPane1 (20%)
             TaskFrame taskFrame = new TaskFrame();
-            jDesktopPane1.add(taskFrame);
+            this.jDesktopPane1.add(taskFrame);
             taskFrame.setNoteTitle(title);
             taskFrame.setNoteContent(content);
             taskFrame.setSize(300, 300);
