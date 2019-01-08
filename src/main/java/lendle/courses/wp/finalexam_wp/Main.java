@@ -5,6 +5,8 @@
  */
 package lendle.courses.wp.finalexam_wp;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.DefaultListModel;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
@@ -106,7 +108,20 @@ public class Main extends javax.swing.JFrame {
         DefaultListModel model = (DefaultListModel) this.jList1.getModel();
         if (model.contains(title)) {
             //Q1: 開啟 message dialog （10%）
-            
+            if(title.equals(title))
+            {
+                
+            }
+            JInternalFrame internalFrame = new JInternalFrame(title);
+            jDesktopPane1.add(internalFrame);
+            internalFrame.setSize(300, 300);
+            internalFrame.setVisible(true);
+            internalFrame.setMaximizable(true);
+            internalFrame.setIconifiable(true);
+            internalFrame.setResizable(true);
+            internalFrame.setClosable(true);
+            internalFrame.setLocation(jDesktopPane1.getAllFrames().length*10, jDesktopPane1.getAllFrames().length*10);
+            this.add(internalFrame);
             ////////////////////
             return;
         }
@@ -114,8 +129,21 @@ public class Main extends javax.swing.JFrame {
         model.addElement(title);
         //Q2: 建立 TaskFrame（等同於 JInternalFrame）
         //加到 jDesktopPane1 (20%)
+        TaskFrame taskFrame = new TaskFrame();
+        jDesktopPane1.add(taskFrame);
+        taskFrame.setContentPane(jDesktopPane1);
+        taskFrame.setSize(300, 300);
+        taskFrame.setVisible(true);
+        taskFrame.setMaximizable(true);
+        taskFrame.setIconifiable(true);
+        taskFrame.setResizable(true);
+        taskFrame.setClosable(true);
+        taskFrame.setLocation(jDesktopPane1.getAllFrames().length*10, jDesktopPane1.getAllFrames().length*10);
+        jDesktopPane1.setVisible(true);
         
         ///////////////////////////////////////
+        this.add(taskFrame);
+        this.setContentPane(jDesktopPane1);
     }//GEN-LAST:event_buttonNewActionPerformed
 
     private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
@@ -133,7 +161,18 @@ public class Main extends javax.swing.JFrame {
             //Q3: 建立 TaskFrame（等同於 JInternalFrame）
             //設定 noteTitle, noteContent
             //加到 jDesktopPane1 (20%)
-            
+            TaskFrame taskFrame = new TaskFrame();
+            jDesktopPane1.add(taskFrame);
+            taskFrame.setNoteTitle(title);
+            taskFrame.setNoteContent(content);
+            taskFrame.setSize(300, 300);
+            taskFrame.setVisible(true);
+            taskFrame.setMaximizable(true);
+            taskFrame.setIconifiable(true);
+            taskFrame.setResizable(true);
+            taskFrame.setClosable(true);
+            taskFrame.setLocation(jDesktopPane1.getAllFrames().length*10, jDesktopPane1.getAllFrames().length*10);
+            jDesktopPane1.setVisible(true);
             //////////////////////////////////////////
         }
     }//GEN-LAST:event_jList1MouseClicked
