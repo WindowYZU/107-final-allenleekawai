@@ -112,6 +112,7 @@ public class Main extends javax.swing.JFrame {
             {
                 JOptionPane.showMessageDialog(rootPane, "不可以重複");
             }
+            jDesktopPane1.add(TaskFrame);
             ////////////////////
             return;
         }
